@@ -10,7 +10,7 @@ const TaskDetail = () => {
   useEffect(() => {
     const fetchTask = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/tasks/${id}`);
+        const response = await axios.get(`https://task-management-app-beryl-one.vercel.app//tasks/${id}`);
         setTask(response.data); // Sets the fetched task data to state
       } catch (error) {
         console.error('There was an error fetching the task!', error);
@@ -26,7 +26,7 @@ const TaskDetail = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:5000/tasks/${task._id}`); // Deletes task
+      await axios.delete(`https://task-management-app-beryl-one.vercel.app//tasks/${task._id}`); // Deletes task
       navigate('/'); // Navigates back to the task list after deletion
     } catch (error) {
       console.error('There was an error deleting the task!', error);
