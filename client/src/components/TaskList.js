@@ -6,7 +6,7 @@ const TaskList = () => {
     const [tasks, setTasks] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/tasks')
+        axios.get('https://task-management-app-beryl-one.vercel.app//tasks')
             .then(response => setTasks(response.data))
             .catch(error => console.error(error));
     }, []);
