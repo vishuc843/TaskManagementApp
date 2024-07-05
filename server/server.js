@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000; // Use the PORT from .env file or default
 
 // Use CORS to allow cross-origin requests
 app.use(cors({
-  origin: 'http://localhost:3000' // Allow requests from this origin
+  origin: 'http://tmacrud.vercel.app' // Allow requests from this origin
 }));
 
 // Middleware to parse JSON requests
